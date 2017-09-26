@@ -1,6 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+
+
+//import router-components
+
+import Home from '@/components/Home/Home'
+import Select from '@/components/Select/Select'
+import Account from '@/components/Account/Account'
+import Account_select from '@/components/Account/Account_select'
+import Account_amend from '@/components/Account/Account_amend'
+import Account_add from '@/components/Account/Account_add'
+import Help from '@/components/Help/Help'
+import Log from '@/components/Log/Log'
+
 
 Vue.use(Router)
 
@@ -8,8 +20,45 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/select',
+      name: 'Select',
+      component: Select
+    },
+    {
+      path: '/account',
+      name: 'Account',
+      component: Account,
+      children: [
+        {
+          path: 'select',
+          name: 'Account_select',
+          component: Account_select
+        },
+        {
+          path: 'amend',
+          name: 'Account_amend',
+          component: Account_amend
+        },
+        {
+          path: 'add',
+          name: 'Account_add',
+          component: Account_add
+        }
+      ]
+    },
+    {
+      path: '/log',
+      name: 'Log',
+      component: Log
+    },
+    {
+      path: '/help',
+      name: 'Help',
+      component: Help
     }
   ]
 })

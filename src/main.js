@@ -3,8 +3,19 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import 'normalize.css'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
+
 
 Vue.config.productionTip = false
+
+Vue.use(VueAxios, axios)
+Vue.use(ElementUI)
+
+
 
 /* eslint-disable no-new */
 new Vue({
