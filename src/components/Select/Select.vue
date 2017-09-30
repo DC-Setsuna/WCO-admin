@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-input placeholder="请输入内容" v-model="select_input">
-      <el-select v-model="select_type" slot="prepend" placeholder="搜索方式">
+      <el-select v-model="select_type" slot="prepend" placeholder="搜索方式" :options="options">
         <el-option label="网站名" value="1"></el-option>
         <el-option label="网址" value="2"></el-option>
       </el-select>
@@ -104,6 +104,13 @@ export default {
         fullpinyin: 'xinlangboke',
         number: '2',
         classid: '2'
+      }],
+      options: [{
+        value: 1,
+        label: '网站名'
+      },{
+        value: 2,
+        label: '2'
       }]
     }
   },
