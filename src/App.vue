@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <vheader></vheader>
-    <router-view></router-view>
+    <router-view class="main-view"></router-view>
   </div>
 </template>
 
@@ -12,16 +12,25 @@ export default {
   name: 'app',
   components: { vheader },
   beforeCreate: function() {
-    //let a = this.$loading({ fullscreen: true })
+    console.log('before')
+    this.$loading({ fullscreen: true })
   },
-  created: function() {
-
+  mounted: function() {
+    this.$nextTick(() => {
+      console.log('mounted')
+      this.$loading({ fullscreen: true }).close()
+    })
   }
 }
 </script>
 
 <style>
-#app {
+  #app {
 
-}
+  }
+  .main-view {
+    margin: 0 auto;
+    padding: 50px 20px 50px 20px;
+    max-width: 1140px;
+  }
 </style>

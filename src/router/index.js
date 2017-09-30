@@ -10,6 +10,7 @@ import Account from '@/components/Account/Account'
 import Account_select from '@/components/Account/Account_select'
 import Account_amend from '@/components/Account/Account_amend'
 import Account_add from '@/components/Account/Account_add'
+import Database from '@/components/Database/Database'
 import Help from '@/components/Help/Help'
 import Log from '@/components/Log/Log'
 
@@ -49,6 +50,11 @@ export default new Router({
           component: Account_add
         }
       ]
+    },
+    {
+      path: '/database',
+      name: 'Database',
+      component: Database
     },
     {
       path: '/log',
