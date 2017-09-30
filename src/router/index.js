@@ -18,8 +18,7 @@ import Log from '@/components/Log/Log'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'Home',
       component: Home
@@ -33,8 +32,7 @@ export default new Router({
       path: '/account',
       name: 'Account',
       component: Account,
-      children: [
-        {
+      children: [{
           path: 'select',
           name: 'Account_select',
           component: Account_select

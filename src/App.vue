@@ -4,7 +4,6 @@
     <router-view class="main-view"></router-view>
   </div>
 </template>
-
 <script>
 import vheader from './page/Vheader.vue'
 
@@ -22,15 +21,15 @@ export default {
     })
   }
 }
+
 </script>
-
 <style>
-  #app {
+#app {}
 
-  }
-  .main-view {
-    margin: 0 auto;
-    padding: 50px 20px 50px 20px;
-    max-width: 1140px;
-  }
+.main-view {
+  margin: 0 auto;
+  padding: 50px 20px 50px 20px;
+  max-width: 1140px;
+}
+
 </style>
